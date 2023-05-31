@@ -39,10 +39,14 @@ arrow.addEventListener("click",()=>{
 })
 
 const navabarMenu = document.querySelector(".navbar__menu");
+const navTogle = document.querySelector(".navbar__togle");
+
 navabarMenu.addEventListener("click",(e)=>{
     const scrollTo =document.querySelector(e.target.dataset.link);
+    navabarMenu.classList.remove("visiable");
     scrollTo.scrollIntoView({behavior:"smooth"});
     
 })
-
-    
+navTogle.addEventListener("click",()=>{
+    navabarMenu.classList.add("visiable")
+})

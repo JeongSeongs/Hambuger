@@ -113,12 +113,23 @@ body{
     padding: 12px 16px;
     margin: 4px;
     cursor: pointer;
+    border-radius: 4px;
 }
 .navbar__menu-item:hover{
     color: var(--color-orange);
     background-color: var(--color-dark-white);
-    border-radius: 4px;
+    
 }
+.navbar__togle{
+    position: absolute;
+    top: 52px;
+    right: 50px;
+
+    color: var(--color-white);
+    font-size: 32px;
+    display: none;
+}
+
 .section__contain{
     max-width: 1200px;
 }
@@ -211,6 +222,7 @@ body{
 }
 .menu__foods{
     display: flex;
+    justify-content: center;
     margin: 32px 0;
 }
 .food{
@@ -300,8 +312,8 @@ body{
     color: var(--color-white);
     background-color: var(--color-orange);
     border-radius: 8px;
-    font-size: var(--font--small);
-    padding: 12px 18px;
+    font-size: var(--font--micro);
+    padding:12px 16px;
     transition: all 300ms;
 }
 .info__btn:hover{
@@ -348,7 +360,7 @@ body{
     color: var(--color-white);
     background-color: var(--color-orange);
     border-radius: 50%;
-    font-size: var(--font-regular);
+    font-size: 16px;
     width: 40px;
     height: 40px;
     line-height: 40px;
@@ -366,4 +378,93 @@ body{
 }
 .box__icon:hover i{
     color: var(--color-orange);
+    transform: scale(1.4);
+}
+
+@media screen and (max-width:768px) {
+    .navbar__togle{
+        display: block;
+        transition: all 300ms;
+
+    }
+    .navbar__togle:hover{
+        color: var(--color-orange);
+    }
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #navbar.dark .navbar__togle{
+        top: 38px;
+        right: 42px;
+    }
+    .navbar__menu{
+        background-color: var(--color-dark-puple);
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .navbar__menu.visiable{
+        display: block;
+    }
+    #home{
+        flex-direction: column;
+
+    }
+    .home__description{
+        text-align: center;
+        margin-right: 0;
+        margin: 32px 0;
+    }
+    .home__avatar{
+        width: 350px;
+        height: 350px;
+    }
+    #about{
+        flex-direction: column;
+    }
+    .about__avatar{
+        width: 350px;
+        height: 350px;
+        margin-right:  0;
+        margin-top: 24px;
+        order: 1;
+    }
+    .about__description{
+        text-align: center;
+        margin: 32px 0;
+       
+    }
+    .menu__foods{
+        flex-direction: column;
+        align-items: center;
+    }
+    .food{
+        flex-grow: 1;
+        margin: 32px 0;
+    }
+    .service__elements{
+        flex-direction: column;
+        
+    }
+    #contact{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact__box.menu{
+        position: relative;
+        left: -32px;
+        
+    }
+    .arrow__up{
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+
+        right: 30px;
+        
+    }
 }
